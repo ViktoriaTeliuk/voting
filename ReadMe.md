@@ -15,9 +15,9 @@ curl -s -X POST http://localhost:8080/voting/api/user/restaurants/vote?restauran
 #Admin Restaurant Controller can:
 # get information about restaurants menus on date
 get /api/admin/restaurants/{id}?day={day}
-# adding restaurant menu
+# adding restaurant menu. In this case each dish will be added to dayMenu and to dictionary menu for restaurant
 post /api/admin/restaurants/ with RequestBody RestaurantTo
-# updating restaurant menu
+# updating restaurant menu. In this case if dish id is null, it will be added to dictionary. So we can choose existing meal from dictionary or add new one which will be added to dictionary(look for example in tests)
 put /api/admin/restaurants/ with RequestBody RestaurantTo
 # deleting restaurant day menu
 delete /api/admin/restaurants/{id}?day={day}
