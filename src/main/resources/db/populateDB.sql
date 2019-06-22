@@ -75,10 +75,13 @@ VALUES (1008, 20, parsedatetime('04-03-2019', 'dd-MM-yyyy'), 100, 1000),
        (1024, 23, parsedatetime('03-03-2019', 'dd-MM-yyyy'), 116, 1250),
        (1025, 23, parsedatetime('03-03-2019', 'dd-MM-yyyy'), 117, 1050),
        (1026, 23, parsedatetime('03-03-2019', 'dd-MM-yyyy'), 118, 1250),
-       (1027, 23, parsedatetime('03-03-2019', 'dd-MM-yyyy'), 119, 1250);
+       (1027, 23, parsedatetime('03-03-2019', 'dd-MM-yyyy'), 119, 1250),
+       (1028, 20, now(), 100, 1000),
+       (1029, 20, now(), 101, 1500);
 
 INSERT INTO VOTES (user_id, restaurant_id, vote_day)
 VALUES (5, 20, parsedatetime('04-03-2019', 'dd-MM-yyyy')),
         (6, 22, parsedatetime('04-03-2019', 'dd-MM-yyyy')),
          (7, 20, parsedatetime('04-03-2019', 'dd-MM-yyyy')),
           (9, 21, parsedatetime('04-03-2019', 'dd-MM-yyyy'));
+

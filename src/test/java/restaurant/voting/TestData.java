@@ -100,10 +100,12 @@ public class TestData {
 
     public static RestaurantTo RESTAURANT_TO_1 = new RestaurantTo(RESTAURANT_ID_1, RESTAURANT_NAME_1, DAY_MENU_DATE,
             List.of(MEAL_TO_1, MEAL_TO_2, MEAL_TO_3, MEAL_TO_4, MEAL_TO_5));
+    public static RestaurantTo RESTAURANT_TO_1_NOW = new RestaurantTo(RESTAURANT_ID_1, RESTAURANT_NAME_1, LocalDate.now(),
+            List.of(MEAL_TO_1, MEAL_TO_2));
     public static RestaurantTo RESTAURANT_TO_2 = new RestaurantTo(RESTAURANT_ID_2, RESTAURANT_NAME_2, DAY_MENU_DATE,
             List.of(MEAL_TO_6, MEAL_TO_7, MEAL_TO_8, MEAL_TO_9, MEAL_TO_10, MEAL_TO_11));
     public static RestaurantTo RESTAURANT_TO_3 = new RestaurantTo(RESTAURANT_ID_3, RESTAURANT_NAME_3, DAY_MENU_DATE,
-            List.of(MEAL_TO_12, MEAL_TO_13, MEAL_TO_14, MEAL_TO_15, MEAL_TO_16));
+            List.of(MEAL_TO_12));
     public static RestaurantTo RESTAURANT_TO_4 = new RestaurantTo(RESTAURANT_ID_4, RESTAURANT_NAME_4, DAY_MENU_DATE,
             List.of());
 

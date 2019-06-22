@@ -17,10 +17,7 @@ public interface MenuRepository extends JpaRepository<Menu, Integer> {
     @Override
     void deleteById(Integer id);
 
-    @Query("select m from Menu m join fetch m.restaurant where m.id = :id")
-    Menu get(@Param("id") Integer id);
-
-    @Query("select m from Menu m join fetch m.restaurant where m.restaurant.id = :id")
+    @Query("select m from Menu m where m.restaurant.id = :id")
     List<Menu> getMenuByRestaurantId(@Param("id") Integer restaurantId);
 }
 

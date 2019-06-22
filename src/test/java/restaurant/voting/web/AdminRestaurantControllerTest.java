@@ -85,8 +85,8 @@ public class AdminRestaurantControllerTest extends AbstractControllerTest {
     }
 
     @Test
-    public void testGetAll() throws Exception {
-        mockMvc.perform(get(REST_URL)
+    public void testGetAllByDate() throws Exception {
+        mockMvc.perform(get(REST_URL + "onDate")
                 .param("day", DAY_MENU_DATE_STR)
                 .with(userHttpBasic(ADMIN_1)))
                 .andExpect(status().isOk())

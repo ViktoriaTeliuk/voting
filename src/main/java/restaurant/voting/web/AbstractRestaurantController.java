@@ -17,8 +17,13 @@ public abstract class AbstractRestaurantController {
     @Autowired
     RestaurantMapper restaurantMapper;
 
-    @GetMapping
+    @GetMapping("onDate")
     public List<RestaurantTo> getAll(@RequestParam LocalDate day) {
         return restaurantMapper.toRestaurantsTo(repository.getAll(day));
+    }
+
+    @GetMapping
+    public List<RestaurantTo> getAllForToday() {
+        return getAll(LocalDate.now());
     }
 }

@@ -19,10 +19,10 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Integer>
     @Transactional
     Restaurant save(Restaurant restaurant);
 
-    @Query("select distinct r from DayMenu dm join Restaurant r on r.id = dm.restaurant.id join fetch r.dayMenus m join fetch m.menu where dm.menuDay = :day")
+    @Query("select distinct r from Restaurant r join fetch r.dayMenus m join fetch m.menu where m.menuDay = :day")
     List<Restaurant> getAll(@Param("day") LocalDate day);
 
-    @Query("select distinct r from DayMenu dm join Restaurant r on r.id = dm.restaurant.id join fetch r.dayMenus m join fetch m.menu where dm.restaurant.id = :restaurantId and dm.menuDay = :day")
+    @Query("select distinct r from Restaurant r join fetch r.dayMenus m join fetch m.menu where r.id = :restaurantId and m.menuDay = :day")
     Restaurant get(@Param("restaurantId") int restaurantId, @Param("day") LocalDate day);
 
     @Query("select r from Restaurant r")

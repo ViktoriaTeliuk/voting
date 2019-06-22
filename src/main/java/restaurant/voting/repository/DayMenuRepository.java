@@ -21,9 +21,6 @@ public interface DayMenuRepository extends JpaRepository<DayMenu, Integer> {
     @Override
     void deleteById(Integer id);
 
-    @Query("select dm from DayMenu dm join fetch dm.restaurant join fetch dm.menu where dm.id = :id")
-    DayMenu get(@Param("id") int id);
-
     DayMenu findByRestaurantAndMenuDayAndMenu(Restaurant restaurant, LocalDate menuDay, Menu menu);
 
     @Transactional

@@ -29,14 +29,4 @@ public class Restaurant extends AbstractNamedEntity {
         super(restaurant.id, restaurant.name);
         this.setDayMenus(restaurant.getDayMenus());
     }
-
-    public void addDayMenu(DayMenu dayMenu) {
-        dayMenus.add(dayMenu);
-        dayMenu.setRestaurant(this);
-    }
-
-    public void removeDayMenu(DayMenu dayMenu) {
-        dayMenus.remove(dayMenu);
-        dayMenu.setRestaurant(null);
-    }
 }
